@@ -1,4 +1,169 @@
-# sir
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Will you be my Valentine?</title>
+
+  <style>
+
+        body {
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            margin-top: 50px;
+
+        }
+
+        button {
+
+            font-size: 20px;
+
+            padding: 10px 20px;
+
+            margin: 20px;
+
+            cursor: pointer;
+
+            border: none;
+
+            border-radius: 5px;
+
+        }
+
+        .cat {
+
+            width: 200px;
+
+            margin-top: 20px;
+
+        }
+
+        .sad-cat {
+
+            display: none;
+
+        }
+
+        .happy-cat {
+
+            display: none;
+
+        }
+
+        .content {
+
+            display: none;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<h1>Enter Password to Continue</h1>
+
+<input type="password" id="password" placeholder="Enter password" />
+
+<button id="submit-password">Submit</button>
+
+
+
+<div class="content">
+    <h1>Will you be my Valentine?</h1>
+
+ <button id="yes-btn">Yes</button>
+
+  <button id="no-btn">No</button>
+
+
+
+   <img src="https://i.imgur.com/NM1mJ7G.png" alt="Sad Cat" class="cat sad-cat" id="sad-cat">
+    <img src="https://i.imgur.com/tSSuNH9.png" alt="Happy Cat" class="cat happy-cat" id="happy-cat">
+
+</div>
+
+
+
+<script>
+
+    const password = '10112004sir.'; // Set the password
+
+    const submitPasswordBtn = document.getElementById('submit-password');
+
+    const passwordInput = document.getElementById('password');
+
+    const contentDiv = document.querySelector('.content');
+
+    
+
+    const yesBtn = document.getElementById('yes-btn');
+
+    const noBtn = document.getElementById('no-btn');
+
+    const sadCat = document.getElementById('sad-cat');
+
+    const happyCat = document.getElementById('happy-cat');
+
+
+
+    submitPasswordBtn.addEventListener('click', () => {
+
+        if (passwordInput.value === password) {
+
+            contentDiv.style.display = 'block';  // Show the Valentine options
+
+            passwordInput.value = ''; // Clear the password input
+
+        } else {
+
+            alert('Incorrect password! Please try again.');
+
+        }
+
+    });
+
+
+
+    yesBtn.addEventListener('click', () => {
+
+        sadCat.style.display = 'none';
+
+        happyCat.style.display = 'block';
+
+    });
+
+
+
+    noBtn.addEventListener('click', () => {
+
+        happyCat.style.display = 'none';
+
+        sadCat.style.display = 'block';
+
+    });
+
+</script>
+
+
+
+</body>
+
+</html>
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Page 2 script loaded!");});
 <!DOCTYPE html>
 <html lang="en">
 <head>
